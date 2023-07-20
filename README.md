@@ -42,6 +42,7 @@ docker-compose.yml
 * Reviewing class demo.
 * Links to images from Google Images search using Creative Commons licenses filter.
 * Wikipedia for about content
+* Base code -> DjangoX from [https://github.com/wsvincent/djangox](https://github.com/wsvincent/djangox)
 
 ## Setup
 
