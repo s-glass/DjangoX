@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+
+{% block content %}
+  <h1>Beyoncé Song List</h1>
+  <p>The following is a list of Sarah's favorite songs by Beyoncé - one favorite per solo studio album produced.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%285_of_118%29_%2852945900006%29_%28cropped%29.jpg" alt="photo of Beyonce on stage at the Renaissance Tour, summer 2003. Beyonce wears a couture black leather bodysuit with mesh arms. She is flawless, as always." width="200" height="300">
+  {% for song in songs %}
+    <p><a href="{% url 'detail_view' song.pk %}">{{ song.title }}</a></p>
+  {% endfor %}
+{% endblock content %}

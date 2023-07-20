@@ -1,7 +1,32 @@
 {% extends '_base.html' %}
+{% load static %}
 
-{% block title %}About page{% endblock %}
+<!DOCTYPE html>
+<head>
+  <title>About Beyoncé</title>
+  <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<nav>
+  <ul>
+    <li><a href="{% url 'list_view' %}">Home</a></li>
+  </ul>
+</nav>
+<body>
+  <header>
+    <a href="{% url 'create_view' %}">New Song</a>
+    <a href="{% url 'list_view' %}">List of Songs</a>
+  </header>
+  <main>
+    {% block content %}
+        <h2>About Beyoncé</h2>
 
-{% block content %}
-<h1>About page</h1>
-{% endblock content %}
+    <p>Beyoncé Giselle Knowles-Carter (/biˈɒnseɪ/ bee-ON-say; born September 4, 1981) is an American singer, songwriter, and businesswoman. Known as "Queen Bey", she has been widely recognized for her boundary-pushing artistry and vocal performances. Beyoncé is regarded as one of the greatest entertainers of her generation. Her contributions to music and visual media have made her an influential pop culture figure of the 21st century.</p>
+    <p><a href="https://en.wikipedia.org/wiki/Beyonc%C3%A9">Source: Wikipedia</a></p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Beyonce_Knowles_with_necklaces.jpg" alt="photo of Beyonce with bared arms and torso, she wears a colorful necklace and light blue nailpolish. Her honey blonde hair is teased to the Gawds. She is flawless, as always." width="250" height="300">
+    
+    {% endblock content %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
